@@ -1,0 +1,7 @@
+system,grouped_accuracy,grouped_macro_f1,selection_note
+initial_corrected_grouped_model,0.7045,0.6463,First zero-overlap grouped model
+fine_tuned_single_checkpoint,0.8792,0.8204,Earlier fine-tuned checkpoint
+earlier_six_view_tta,0.8865,0.8322,Fixed spatial probability average
+guarded_macro_f1_checkpoint,0.9103,0.8926,Macro-F1 selection with accuracy guard
+guarded_model_six_view_tta,0.9212,0.9039,Six fixed spatial views
+exposure_trained_honest_system,0.9290,0.9129,Exposure continuation and honest selection

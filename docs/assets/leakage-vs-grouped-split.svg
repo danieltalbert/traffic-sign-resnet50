@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="430" viewBox="0 0 980 430" role="img" aria-labelledby="title desc">
+  <title id="title">Random frame split compared with physical-sign grouped split</title>
+  <desc id="desc">The random split leaks neighboring frames from the same sign into training and validation; the grouped split keeps every frame from a sign in one partition.</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="980" height="430" rx="18" fill="url(#bg2)"/>
+  <text x="48" y="55" fill="#f0f6fc" font-family="Arial, sans-serif" font-size="25" font-weight="700">Why the split strategy changes the result</text>
+  <text x="48" y="83" fill="#8b949e" font-family="Arial, sans-serif" font-size="15">Neighboring frames share the same physical sign, background, and capture conditions.</text>
+
+  <g transform="translate(48,112)" font-family="Arial, sans-serif">
+    <rect width="414" height="260" rx="14" fill="#21262d" stroke="#f85149" stroke-width="2" filter="url(#shadow)"/>
+    <text x="22" y="35" fill="#f85149" font-size="19" font-weight="700">Random frame split</text>
+    <text x="22" y="60" fill="#8b949e" font-size="13">Same sign appears on both sides</text>
+    <rect x="22" y="83" width="174" height="143" rx="10" fill="#0d2d1f" stroke="#238636"/>
+    <text x="37" y="108" fill="#56d364" font-size="14" font-weight="700">TRAIN</text>
+    <rect x="39" y="125" width="58" height="58" rx="8" fill="#1f6feb"/><text x="68" y="160" text-anchor="middle" fill="white" font-size="18">A1</text>
+    <rect x="117" y="125" width="58" height="58" rx="8" fill="#8957e5"/><text x="146" y="160" text-anchor="middle" fill="white" font-size="18">B1</text>
+    <rect x="218" y="83" width="174" height="143" rx="10" fill="#321d1d" stroke="#da3633"/>
+    <text x="233" y="108" fill="#ff7b72" font-size="14" font-weight="700">VALIDATE</text>
+    <rect x="235" y="125" width="58" height="58" rx="8" fill="#1f6feb"/><text x="264" y="160" text-anchor="middle" fill="white" font-size="18">A2</text>
+    <rect x="313" y="125" width="58" height="58" rx="8" fill="#8957e5"/><text x="342" y="160" text-anchor="middle" fill="white" font-size="18">B2</text>
+    <path d="M68 188 C80 244,250 244,264 188" fill="none" stroke="#f85149" stroke-width="3" stroke-dasharray="7 6"/>
+    <text x="207" y="247" text-anchor="middle" fill="#ff7b72" font-size="13">99.92% of groups leaked</text>
+  </g>
+
+  <g transform="translate(518,112)" font-family="Arial, sans-serif">
+    <rect width="414" height="260" rx="14" fill="#21262d" stroke="#3fb950" stroke-width="2" filter="url(#shadow)"/>
+    <text x="22" y="35" fill="#3fb950" font-size="19" font-weight="700">Physical-sign grouped split</text>
+    <text x="22" y="60" fill="#8b949e" font-size="13">All frames from one sign stay together</text>
+    <rect x="22" y="83" width="174" height="143" rx="10" fill="#0d2d1f" stroke="#238636"/>
+    <text x="37" y="108" fill="#56d364" font-size="14" font-weight="700">TRAIN</text>
+    <rect x="39" y="125" width="58" height="58" rx="8" fill="#1f6feb"/><text x="68" y="160" text-anchor="middle" fill="white" font-size="18">A1</text>
+    <rect x="117" y="125" width="58" height="58" rx="8" fill="#1f6feb"/><text x="146" y="160" text-anchor="middle" fill="white" font-size="18">A2</text>
+    <rect x="218" y="83" width="174" height="143" rx="10" fill="#321d1d" stroke="#da3633"/>
+    <text x="233" y="108" fill="#ff7b72" font-size="14" font-weight="700">VALIDATE</text>
+    <rect x="235" y="125" width="58" height="58" rx="8" fill="#8957e5"/><text x="264" y="160" text-anchor="middle" fill="white" font-size="18">B1</text>
+    <rect x="313" y="125" width="58" height="58" rx="8" fill="#8957e5"/><text x="342" y="160" text-anchor="middle" fill="white" font-size="18">B2</text>
+    <path d="M196 198 L218 198" fill="none" stroke="#3fb950" stroke-width="3"/>
+    <text x="207" y="247" text-anchor="middle" fill="#56d364" font-size="13">0 overlapping groups</text>
+  </g>
+</svg>

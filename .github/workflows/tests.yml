@@ -1,0 +1,46 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# A newer run replaces an older run for the same branch or pull request.
+concurrency:
+  group: tests-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      # Tests use synthetic fixtures and do not require the private course dataset.
+      - name: Run unit tests
+        env:
+          CUDA_VISIBLE_DEVICES: ""
+          TF_CPP_MIN_LOG_LEVEL: "2"
+        run: |
+          python -m unittest -v \
+            test_roadsign_pipeline.py \
+            test_resnet_training_tools.py \
+            test_mini_calibrated_submission.py
