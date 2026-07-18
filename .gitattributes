@@ -1,0 +1,6 @@
+# Keep source and documentation diffs consistent across Windows, WSL, and CI.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.png binary
+*.jpg binary
+*.jpeg binary
