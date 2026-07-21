@@ -1,6 +1,7 @@
 # Leakage-Aware Traffic Sign Recognition with ResNet50
 
 [![Tests](https://github.com/danieltalbert/traffic-sign-resnet50/actions/workflows/tests.yml/badge.svg)](https://github.com/danieltalbert/traffic-sign-resnet50/actions/workflows/tests.yml)
+![License: MIT](https://img.shields.io/badge/License-MIT-2ea44f.svg)
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![TensorFlow 2.21](https://img.shields.io/badge/TensorFlow-2.21-FF6F00?logo=tensorflow&logoColor=white)
 ![ResNet50](https://img.shields.io/badge/Backbone-ResNet50-6f42c1)
@@ -139,3 +140,12 @@ The publication snapshot was checked with:
 This repository contains original project code and aggregate evaluation results only. It does **not** redistribute the BYU-Idaho course dataset, GTSRB-style image files, holdout images, reference answers, trained checkpoints, or full prediction exports. Obtain any dataset from its authorized source and follow its terms and your institution's academic-integrity policy.
 
 Project code is licensed under the [MIT License](LICENSE). Dataset and course materials are not covered by that license.
+
+## Release and citation
+
+The portfolio-ready publication snapshot is tagged as `v1.0.0`. Changes after
+that snapshot are recorded in [CHANGELOG.md](CHANGELOG.md).
+
+If you reference this implementation or its leakage analysis, use the metadata
+in [CITATION.cff](CITATION.cff). The citation covers this repository's original
+code and documentation, not the underlying dataset.
