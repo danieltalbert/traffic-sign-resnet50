@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Leakage-aware traffic sign recognition</title>
+  <desc id="desc">A social card reporting 92.90 percent grouped accuracy and 91.29 percent macro F1 across 43 traffic-sign classes.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1b2a"/>
+      <stop offset="1" stop-color="#173f5f"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2ea44f"/>
+      <stop offset="1" stop-color="#75d98c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="640" fill="url(#background)"/>
+  <circle cx="1130" cy="90" r="180" fill="#2ea44f" opacity="0.08"/>
+  <circle cx="120" cy="600" r="230" fill="#4ca1d8" opacity="0.08"/>
+
+  <g transform="translate(78 72)">
+    <text x="0" y="0" dominant-baseline="hanging" fill="#75d98c" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2">COMPUTER VISION · HONEST EVALUATION</text>
+    <text x="0" y="65" dominant-baseline="hanging" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="58" font-weight="750">Leakage-Aware Traffic Sign</text>
+    <text x="0" y="132" dominant-baseline="hanging" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="58" font-weight="750">Recognition with ResNet50</text>
+    <text x="0" y="222" dominant-baseline="hanging" fill="#b8c7d4" font-family="Segoe UI, Arial, sans-serif" font-size="27">43 classes · 261 unseen physical-sign groups · zero group overlap</text>
+
+    <g transform="translate(0 310)">
+      <rect width="520" height="156" rx="18" fill="#ffffff" opacity="0.07" stroke="#75d98c" stroke-opacity="0.38"/>
+      <text x="30" y="30" dominant-baseline="hanging" fill="#b8c7d4" font-family="Segoe UI, Arial, sans-serif" font-size="22">GROUPED ACCURACY</text>
+      <text x="30" y="70" dominant-baseline="hanging" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="750">92.90%</text>
+      <rect x="250" y="92" width="230" height="18" rx="9" fill="#ffffff" opacity="0.13"/>
+      <rect x="250" y="92" width="214" height="18" rx="9" fill="url(#bar)"/>
+    </g>
+
+    <g transform="translate(548 310)">
+      <rect width="520" height="156" rx="18" fill="#ffffff" opacity="0.07" stroke="#4ca1d8" stroke-opacity="0.38"/>
+      <text x="30" y="30" dominant-baseline="hanging" fill="#b8c7d4" font-family="Segoe UI, Arial, sans-serif" font-size="22">GROUPED MACRO F1</text>
+      <text x="30" y="70" dominant-baseline="hanging" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="750">91.29%</text>
+      <rect x="250" y="92" width="230" height="18" rx="9" fill="#ffffff" opacity="0.13"/>
+      <rect x="250" y="92" width="210" height="18" rx="9" fill="#4ca1d8"/>
+    </g>
+
+    <text x="0" y="506" dominant-baseline="hanging" fill="#b8c7d4" font-family="Segoe UI, Arial, sans-serif" font-size="22">TensorFlow · grouped validation · sign-safe TTA · reproducible tests</text>
+    <text x="1068" y="506" dominant-baseline="hanging" text-anchor="end" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="650">danieltalbert</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this implementation or its leakage analysis, please cite it as below."
+title: "Leakage-Aware Traffic Sign Recognition with ResNet50"
+type: software
+authors:
+  - family-names: Talbert
+    given-names: Daniel
+repository-code: "https://github.com/danieltalbert/traffic-sign-resnet50"
+url: "https://github.com/danieltalbert/traffic-sign-resnet50"
+license: MIT
+version: 1.0.0
+date-released: 2026-07-20
+keywords:
+  - traffic sign recognition
+  - grouped validation
+  - computer vision
+  - TensorFlow
+  - ResNet50
