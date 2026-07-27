@@ -9,6 +9,8 @@
 
 A reproducible TensorFlow computer-vision pipeline for classifying 43 traffic-sign classes. The most important result was not a new layer—it was repairing the evaluation. A random frame split had leaked almost every physical sign across training and validation, so I rebuilt the project around class-stratified physical-sign groups and optimized against honest grouped macro F1.
 
+![Traffic-sign recognition portfolio overview with grouped accuracy and macro F1](docs/assets/social-preview.png)
+
 ## Results at a glance
 
 | Evaluation | Accuracy | Macro F1 |
@@ -35,6 +37,8 @@ The corrected split parses each image as `CLASS:TRACK`, stratifies groups inside
 - Group overlap: **0**
 
 ![Random frame leakage compared with grouped validation](docs/assets/leakage-vs-grouped-split.svg)
+
+> **Evaluation lesson:** when many images come from the same physical object, split by the object—not by the image. Otherwise the validation set can reward recognition of a familiar sign instance instead of generalization to a new one.
 
 ## Modeling pipeline
 
