@@ -9,6 +9,7 @@ All notable changes to this project are documented here.
 - Project-specific concept artwork that explains grouped generalization at a glance.
 - Start-here navigation, accessible image descriptions, and contributor support files.
 - Structured reproducibility reports, a pull-request checklist, and Dependabot coverage.
+- Pillow 12.3.0, closing the advisories affecting the previous 12.2.0 pin.
 
 ## [1.0.0] - 2026-07-20
 
