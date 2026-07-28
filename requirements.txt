@@ -1,6 +1,6 @@
 # Versions used for the verified July 2026 experiment environment.
 tensorflow==2.21.0
-numpy==2.5.0
+numpy==2.5.1
 scipy==1.18.0
 scikit-learn==1.9.0
 Pillow==12.3.0
