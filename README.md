@@ -9,7 +9,20 @@
 
 A reproducible TensorFlow computer-vision pipeline for classifying 43 traffic-sign classes. The most important result was not a new layer—it was repairing the evaluation. A random frame split had leaked almost every physical sign across training and validation, so I rebuilt the project around class-stratified physical-sign groups and optimized against honest grouped macro F1.
 
-![Traffic-sign recognition portfolio overview with grouped accuracy and macro F1](docs/assets/social-preview.png)
+![Conceptual illustration of several correlated camera frames from one speed-limit sign passing through learned feature layers before evaluation on a separate unseen slippery-road sign](docs/assets/grouped-generalization-hero.jpg)
+
+_Visual intuition: neighboring frames from one physical sign stay together; the honest test is a different physical sign. The measured evidence begins below._
+
+## Start here
+
+| If you want to... | Go to |
+| --- | --- |
+| See the strongest measured result | [Results at a glance](#results-at-a-glance) |
+| Understand the evaluation failure | [The hidden leakage problem](#the-hidden-leakage-problem) |
+| Inspect the model and data flow | [Modeling pipeline](#modeling-pipeline) |
+| Reproduce the published checks | [Quick start](#quick-start) |
+| Review limitations and intended use | [Model card](docs/MODEL_CARD.md) |
+| Cite or extend the project | [Release and citation](#release-and-citation) · [Contributing](CONTRIBUTING.md) |
 
 ## Results at a glance
 
@@ -153,3 +166,7 @@ that snapshot are recorded in [CHANGELOG.md](CHANGELOG.md).
 If you reference this implementation or its leakage analysis, use the metadata
 in [CITATION.cff](CITATION.cff). The citation covers this repository's original
 code and documentation, not the underlying dataset.
+
+Questions about reproduction belong in the repository's issue form. Please read
+[SUPPORT.md](SUPPORT.md) and [CONTRIBUTING.md](CONTRIBUTING.md) before opening an
+issue or pull request; security-sensitive reports follow [SECURITY.md](SECURITY.md).

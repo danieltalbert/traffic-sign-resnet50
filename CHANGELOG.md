@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented here.
 
+## [Unreleased]
+
+### Added
+
+- Project-specific concept artwork that explains grouped generalization at a glance.
+- Start-here navigation, accessible image descriptions, and contributor support files.
+- Structured reproducibility reports, a pull-request checklist, and Dependabot coverage.
+
 ## [1.0.0] - 2026-07-20
 
 ### Added

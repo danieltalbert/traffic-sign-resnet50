@@ -1,0 +1,49 @@
+name: Reproducibility report
+description: Report a problem reproducing a documented command, test, or result.
+title: "[Reproducibility]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Do not upload restricted datasets, answer files,
+        checkpoints, prediction exports, credentials, or personal information.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What could not be reproduced?
+      description: Name the README section, command, test, or aggregate result.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include OS, Python version, TensorFlow version, and CPU or GPU context.
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and minimal output
+      description: Paste the exact command and the shortest useful error excerpt.
+      render: shell
+    validations:
+      required: true
+  - type: dropdown
+    id: data-boundary
+    attributes:
+      label: Data boundary
+      description: Which data did this run use?
+      options:
+        - Synthetic or public fixture only
+        - Authorized local training data
+        - No dataset required
+        - Other or uncertain
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
